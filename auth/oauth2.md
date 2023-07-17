@@ -36,8 +36,31 @@ In RFC-6749, there are 5 authorization flow.
 
 The most import flow is authoirzation code flow.
 
-### Authorization code flow
+## Introspection
 
+Token Introspection is defined in RFC-7662.
+- https://datatracker.ietf.org/doc/html/rfc7662
+
+This achive token introspection by resource server.
+Minimal information is returned, for example, 
+to whom it has been issued or when it will expire.
+
+## OIDC
+
+Open ID Connect.
+
+### Claim
+
+- sub: Subject to issue.
+- iat: Issued at.
+- exp: When it will expire at.
+
+### OIDC Discovery
+
+https://openid.net/specs/openid-connect-discovery-1_0.html
+
+For example,
+- https://example.com/.well-known/openid-configuration
 
 
 ## Security tips
