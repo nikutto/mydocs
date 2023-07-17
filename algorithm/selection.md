@@ -22,7 +22,7 @@
   - 木はマージが簡単にできる -> 圧縮を並列してそのあとマージで並列を有効活用
   - 精度2倍で圧縮後の大きさ2倍
   - https://citeseerx.ist.psu.edu/doc/10.1.1.132.7343
-  - HiveとかPrestoの実装がこれらしい
+  - HiveとかPrestoのapprox_percentileの実装がこれらしい
 
 bucket解:
 - カーディナリティが低いならバケットソートの要領でカウントすれば高速
