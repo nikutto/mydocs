@@ -24,6 +24,8 @@ Linuxでは以下のFile Systemが使われる。Linuxではこれらの差異�
   - 最大ボリュームサイズは1EiB
 - xfs
   - CentOS7で使われるらしい
+- tmpfs
+  - メモリで作成するFile System
 
 #### i-nodeについて
 
