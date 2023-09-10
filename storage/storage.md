@@ -4,6 +4,47 @@
 
 ## Software
 
+### Fils System
+
+ストレージにどうデータを乗せるかやその管理をするためのシステム。OSで管理される。
+`df -T`で調べられる。
+
+#### File Systemの種類
+
+File Systemにはいくつかの種類がある。
+Linuxでは以下のFile Systemが使われる。Linuxではこれらの差異をVFS (Virtual File System)として吸収できる。
+- ext2
+  - 初期のLinuxシステム
+  - 最大16TiBのボリュームサイズ
+- ext3
+  - ext2の後継
+  - 最大ボリュームサイズは2TiB~32TiB
+- ext4
+  - ext3の後継。ext3としてマウント可能
+  - 最大ボリュームサイズは1EiB
+- xfs
+  - CentOS7で使われるらしい
+
+#### i-nodeについて
+
+i-nodeはindex-nodeの略。
+File Systemはグラフ構造を持つが、そのnodeのこと。
+i-nodeはディレクトリとファイルのエントリと対応している。
+i-nodeは以下の情報を持つ。ファイル名の情報は持っていないらしい。
+- inode番号
+- ファイルを格納するデバイスのID
+- ファイル所有者のユーザID
+- mode (permission)
+- timestamp
+  - ctime (inodeの更新時)
+  - mtime (ファイルの更新時)
+  - atime (参照時)
+
+### Distributed Storage
+　
+クラウドなどスケーラブルな環境で動作するストレージについてまとめる。
+これらはファイルシステムの上に立つソフトウェアである。
+
 - HDFS (Hadoop Distributed File System)
   - Apache
 - Amazon S3 (Amazon Simple Storage Service)  
@@ -16,11 +57,14 @@
 
 ## Hardware
 
-### Device
+### Drive
 
+ドライブは以下のようなものがある。
 - 光学ドライブ
 - HDD (Hard Disk Drive)
 - SSD (Solid State Drive)
+
+linuxなら`lsblk`(list block storage)コマンドで接続されているストレージの一覧を調べられる。
 
 #### 光学ドライブ
 
