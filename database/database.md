@@ -45,6 +45,12 @@ Database（またはクエリエンジンなど）として使われているソ
 - 有料ライセンス
 - よく知らない
 
+### Vitess
+
+ざっくりいうとMySQLをScalableにしたものらしい。
+NativeでShardingができるのが偉い（もちろんその分CAP定理的な犠牲が発生する）。
+よくしらない。
+
 ## Data warehouse系のSQLベースクエリエンジン
 
 ### Hive
